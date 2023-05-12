@@ -11,6 +11,8 @@ var quizScreenEl = document.querySelector(".quiz-container");
 var initialsInput = document.querySelector("#inputInitials")
 var initialsForm = document.querySelector("#initialsForm")
 var scoreEl = document.querySelector("#score")
+var form = document.querySelector("#form")
+var results = document.querySelector("#results")
 
 var timeEl = document.getElementById("timer");
 var choices1 = document.getElementById("choice1")
@@ -98,6 +100,7 @@ if (myQuestionsInterval > 4) {
     //element.textContent = element.
     quizScreenEl.setAttribute("class", "hide");
     initialsForm.removeAttribute("class", "hide");
+    results.setAttribute("class", "hide");
     scoreEl.textContent = "your score is " + scores 
 } else {
     renderQuestions();
@@ -117,9 +120,12 @@ function highscore (e) {
     localStorageScores.push(scoreObject)
     localStorage.setItem("highscores", JSON.stringify(localStorageScores))
     // then wanna hide the intials form
-    initialsForm.setAttribute("class", "hide");
+    form.setAttribute("class", "hide");
     initialsInput.value=""
-    location.replace("./highscores.html2")
+    results.removeAttribute("class", "hide");
+
+    //location.replace()      
+    // test for git     
 }
 
 // optionsContainer.addEventListener("click", function) {

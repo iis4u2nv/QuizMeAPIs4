@@ -46,15 +46,20 @@
         <div id="initialsForm" class="clearfix">
             
             <div class="card">
-              <h2>All Done!</h2>
-              <h3 id="score">Your score is </h3>
-              <form method="POST">
+                <div id="results">
+                    <h2>All Done!</h2>
+                    <h3 id="score">Your score is </h3>
+                </div>
+
+              <form id="form" method="POST">
+
                 <div class="input-group">
                   <label for="enter your initals here">Enter your initials here</label>
                   <input id="inputInitials" type="text" placeholder="initials"/>
                   
                 </div>
                 <button id="submit">Submit</button>
+            </form>
     </div>
 
     <script src="./js/script.js"></script>
